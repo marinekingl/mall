@@ -3,7 +3,7 @@
     <nav-bar class="home-nav">
       <h4 slot="center">购物街</h4>
     </nav-bar>
-    <scroll class="content">
+    <scroll class="content" ref="scroll" :probetype="3" @scroll="newscroll">
       <home-swiper></home-swiper>
       <recommend-view></recommend-view>
       <a href="">
@@ -12,7 +12,7 @@
       <tab-control class="tab-control" :name="['fashion','classic','music']" @tabClick="tabclick"></tab-control>
       <goodslist :goods="changegoods"></goodslist>
     </scroll>
-    <backtop></backtop>
+    <backtop @click.native="topClick" v-show="isShow"></backtop>
   </div>
 </template>
 <script>
@@ -27,6 +27,7 @@ import backtop from "components/common/backtop/BackTop";
 
 import { getHomeMultidata } from "network/home";
 import db from "../../../db.js";
+import { log } from "util";
 
 export default {
   name: "home",
@@ -35,7 +36,8 @@ export default {
       banners: null,
       goods: db,
       change: "fashion",
-      scroll: null
+      scroll: null,
+      isShow: true
     };
   },
   components: {
@@ -45,7 +47,7 @@ export default {
     TabControl,
     goodslist,
     Scroll,
-    backtop,
+    backtop
   },
   created() {
     //请求多个数据
@@ -67,7 +69,14 @@ export default {
           this.change = "music";
           break;
       }
-      // console.log(this.change)
+    },
+    topClick() {
+      this.$refs.scroll.scroll.scrollTo(0,0,500)
+    },
+    newscroll(position) {
+      // console.log(position.y);
+      let y = position.y;
+      this.isShow = (-position.y) > 400
     }
   },
   computed: {
@@ -80,7 +89,7 @@ export default {
 
 <style scoped>
 #home {
-  /* padding-top: 44px; */
+  padding-top: 44px;
   height: 100vh;
 }
 .home-nav {
@@ -104,6 +113,6 @@ export default {
 .content {
   height: 95%;
   overflow: hidden;
-  margin-top: 44px;
+  /* margin-top: 44px; */
 }
 </style>
