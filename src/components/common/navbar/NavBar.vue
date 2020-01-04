@@ -18,14 +18,13 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
     .nav-bar{
         text-align: center;
         display: flex;
         line-height: 44px;
         height: 44px;
         box-shadow: 0 1px 1px rgba(100,100,100,.2); 
-        
     }
     .left,.right{
         width: 60px;

@@ -16,10 +16,10 @@ export default {
     data(){
         return {
              banner:[
-        {id:1,url:'https://via.placeholder.com/150/92c952'},
-        {id:1,url:'https://via.placeholder.com/150/92c952'},
-        {id:1,url:'https://via.placeholder.com/150/92c952'},
-        {id:1,url:'https://via.placeholder.com/150/92c952'},
+        {id:1,url:'https://via.placeholder.com/600/a7c272'},
+        {id:1,url:'https://via.placeholder.com/600/a7c272'},
+        {id:1,url:'https://via.placeholder.com/600/a7c272'},
+        {id:1,url:'https://via.placeholder.com/600/a7c272'},
       ]
         }
     },
@@ -29,7 +29,7 @@ export default {
     }
 }
 </script>
-<style scope>
+<style scoped>
 .home-swip{
     height: 100px;
 }
