@@ -1,7 +1,7 @@
 <template>
-    <div class="goodslitsitem">
+    <div class="goodslitsitem" @click="detailClick" >
         <div>
-        <img :src="goodsitem.img" alt="" class="img">
+        <img :src="goodsitem.img" alt="" class="img" >
             <p>{{goodsitem.title}}</p>
             <span class="price">{{goodsitem.price}} rmb</span>
             <span class="collocet">  收藏：{{goodsitem.cfav}}</span>
@@ -18,6 +18,11 @@ export default {
       dafault() {
         return {};
       }
+    }
+  },
+  methods:{
+    detailClick(){
+      this.$router.push('/detail')
     }
   }
 };

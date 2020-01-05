@@ -8,6 +8,8 @@ const home = () => import('views/home/home.vue')
 const category = () => import('views/category/category.vue')
 const profile = () => import('views/profile/profile.vue')
 const cart = () => import('views/cart/cart.vue')
+const detail = () => import('views/detail/detail.vue')
+
 
 const routes = [{
     path: '',
@@ -28,6 +30,10 @@ const routes = [{
   {
     path: '/cart',
     component: cart
+  },
+  {
+    path:'/detail',
+    component:detail
   },
 ]
 
