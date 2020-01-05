@@ -31,7 +31,7 @@ export default {
 </script>
 <style scoped>
 .home-swip{
-    height: 100px;
+    height: 150px;
 }
 
 </style>
