@@ -13,6 +13,10 @@ export default {
   name: "app",
   components: {
     MainTabBar,
+  },
+  created(){
+    console.log("created");
+    
   }
 };
 </script>

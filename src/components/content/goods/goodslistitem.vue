@@ -1,12 +1,12 @@
 <template>
-    <div class="goodslitsitem" @click="detailClick" >
-        <div>
-        <img :src="goodsitem.img" alt="" class="img" >
-            <p>{{goodsitem.title}}</p>
-            <span class="price">{{goodsitem.price}} rmb</span>
-            <span class="collocet">  收藏：{{goodsitem.cfav}}</span>
-        </div>
+  <div class="goodslitsitem" @click="detailClick">
+    <div>
+      <img :src="goodsitem.img" alt="" class="img">
+      <p>{{goodsitem.title}}</p>
+      <span class="price">{{goodsitem.price}} rmb</span>
+      <span class="collocet">收藏：{{goodsitem.cfav}}</span>
     </div>
+  </div>
 </template>
 
 <script>
@@ -20,9 +20,9 @@ export default {
       }
     }
   },
-  methods:{
-    detailClick(){
-      this.$router.push('/detail')
+  methods: {
+    detailClick() {
+      this.$router.push("/detail");
     }
   }
 };
@@ -34,7 +34,7 @@ img {
   width: 100%;
   border-radius: 2%;
 }
-.price{
+.price {
   color: red;
 }
 </style>

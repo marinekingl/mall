@@ -146,8 +146,19 @@ var goods = {
       },
     ]
   },
+  'detailitem':{
+    list:[
+      {
+        title: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, iure!',
+        price:'$39.00',
+        discount:'$199.00',
+        Sales:"10441",
+        Favorite:"161人",
+      }
+    ]
+  }
 }
 
-console.log(goods['fashion'].list[0].img);
+
 
 export default goods

@@ -3,7 +3,7 @@
         <div v-for="item in img" class="recommend-item">
             <a href="">
                 <img :src="item.url" alt="">
-                <div>hello</div>
+                <div>{{item.text}}</div>
             </a>
         </div>
     </div>
@@ -22,8 +22,15 @@ export default {
       ]
     };
   },
-  props: {}
-};
+  props: {
+    banners:{
+      type:Object,
+      default(){
+        return {}
+      }
+    }
+  }
+}
 </script>
 <style scoped>
 .recommend {

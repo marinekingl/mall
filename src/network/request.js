@@ -5,6 +5,10 @@ export function request(config) {
     baseURL: 'http://jsonplaceholder.typicode.com/',
     timeout: 5000,
     method: 'get',
+    headers:{
+      "Content-type":"tex/plain",
+      "Access-Control-Allow-Credentials":true,
+    },
   })
 
   // axios 拦截器
